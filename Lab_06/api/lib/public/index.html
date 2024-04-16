@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Numbers</title>
+</head>
+<body>
+    <h1>Numbers</h1>
+    <ul id="numbersList"></ul>
+
+    <script>
+        // Tablica z liczbami
+        let testArr = [4, 5, 6, 3, 5, 3, 7, 5, 13, 5, 6, 4, 3, 6, 3, 6];
+        
+        // Znajdujemy element listy w pliku HTML
+        const numbersList = document.getElementById('numbersList');
+
+        // Iterujemy po tablicy i dodajemy każdą liczbę do listy
+        testArr.forEach(number => {
+            const listItem = document.createElement('li');
+            listItem.textContent = number;
+            numbersList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
