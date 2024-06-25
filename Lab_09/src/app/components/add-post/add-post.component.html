@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Dodaj nowy post</h1><hr>
+  <div class="d-flex flex-row w-100 justify-content-center  align-items-center">
+    <div class="flex-grow-1">
+      <form action="">
+        <div class="input-group mb-2 w-50 ">
+          <input [(ngModel)]="post.title" type="text" class="form-control" name="title" placeholder="Tytuł posta" title="Tytuł Posta">
+        </div>
+        <div class="input-group mb-5 d-flex flex-column w-50">
+          Zawartość posta
+          <textarea rows="10" [(ngModel)]="post.text" placeholder="Tytuł posta" type="text" class="form-textarea form-control" name="text" placeholder="" title="Tytuł Posta"></textarea>
+        </div>
+        <div class="input-group mb-2 d-flex flex-column">
+          Obraz posta
+          <input [(ngModel)]="post.image" type="text" class="form-control w-50" name="image" placeholder="Adres obrazu (URL)" title="Adres Obrazu">
+        </div>
+
+        <button (click)="send()" type="submit" class="btn btn-primary">Dodaj wpis na blogu</button>            </form>
+    </div>
+
+  </div>
+  <div *ngIf="wasSent" class="d-flex flex-column align-items-center">
+    <div *ngIf="errorMessage != ''" class="alert custom-alert-bad text-center w-25">
+      Nie udało się wstawić posta na blogu
+    </div>
+    <div *ngIf="errorMessage == ''" class="alert custom-alert-good text-center w-25">
+      Udało się wstawić posta na blogu
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.blog-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-item-text {
+    margin-top: 10px;
+  }
+
+  .blog-item-image img {
+    max-width: 100%;
+    border-radius: 8px;
+  }

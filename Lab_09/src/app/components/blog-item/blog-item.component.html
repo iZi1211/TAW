@@ -1,0 +1,7 @@
+<div class="card">
+  <blog-item-image [image]="image"/>
+  <div class="card-body">
+    <blog-item-text [text]="text"></blog-item-text>
+    <a class="btn btn-primary" [routerLink]="['/blog/details/' + this.id]" routerLinkActive="active">Rozwiń</a>
+  </div>
+</div>
